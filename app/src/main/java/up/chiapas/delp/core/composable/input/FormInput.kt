@@ -1,4 +1,4 @@
-package up.chiapas.delp.core.navigation.composable.input
+package up.chiapas.delp.core.composable.input
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -86,8 +86,8 @@ fun FormPasswordInput(
         },
         trailingIcon = {
             Icon(
-                painter = if (passwordVisible) painterResource(R.drawable.visibility_off_24px) else painterResource(R.drawable.visibility_24px),
-                contentDescription = if (passwordVisible) "Visibility Off Icon" else "Visibility Icon",
+                painter = if (!passwordVisible) painterResource(R.drawable.visibility_off_24px) else painterResource(R.drawable.visibility_24px),
+                contentDescription = if (!passwordVisible) "Visibility Off Icon" else "Visibility Icon",
                 tint = Purple,
                 modifier = Modifier.clickable {
                     passwordVisible = !passwordVisible

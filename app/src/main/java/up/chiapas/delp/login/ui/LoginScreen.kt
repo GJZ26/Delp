@@ -1,23 +1,14 @@
-package up.chiapas.delp.login.ui.screens
+package up.chiapas.delp.login.ui
 
-import android.provider.ContactsContract.CommonDataKinds.Email
+import android.util.Log
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Email
-import androidx.compose.material3.Button
-import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.Icon
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
-import androidx.compose.material3.TextFieldDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -26,22 +17,24 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.text.input.KeyboardType
-import androidx.compose.ui.text.input.PasswordVisualTransformation
-import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
 import up.chiapas.delp.R
-import up.chiapas.delp.core.navigation.composable.input.FormInput
-import up.chiapas.delp.core.navigation.composable.input.FormPasswordInput
-import up.chiapas.delp.core.navigation.composable.text.Title
-import up.chiapas.delp.ui.theme.Blue
+import up.chiapas.delp.core.composable.clickable.InternalButton
+import up.chiapas.delp.core.composable.clickable.InternalTextButton
+import up.chiapas.delp.core.composable.clickable.TextButtonType
+import up.chiapas.delp.core.composable.input.FormInput
+import up.chiapas.delp.core.composable.input.FormPasswordInput
+import up.chiapas.delp.core.composable.text.Title
+import up.chiapas.delp.core.navigation.Login
+import up.chiapas.delp.core.navigation.Register
 import up.chiapas.delp.ui.theme.Purple
-import up.chiapas.delp.ui.theme.White
 
-@OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun LoginScreen() {
+fun LoginScreen(navController: NavController) {
     var emailText by rememberSaveable { mutableStateOf("") }
     var passwordText by rememberSaveable { mutableStateOf("") }
+
+    // limpiar el registro de navController para que entrando a login, no haya forma de retroceder!
 
     Column(
         modifier = Modifier
@@ -56,7 +49,12 @@ fun LoginScreen() {
             text = stringResource(R.string.welcome)
         )
 
-        FormInput(emailText, stringResource(R.string.email_placeholder), Icons.Filled.Email, "Email Icon"){
+        FormInput(
+            emailText,
+            stringResource(R.string.email_placeholder),
+            Icons.Filled.Email,
+            "Email Icon"
+        ) {
             emailText = it
         }
 
@@ -64,18 +62,16 @@ fun LoginScreen() {
             passwordText = it
         }
 
-        Button(onClick = {
-
-        }) {
-            Text(stringResource(R.string.access))
+        InternalButton(stringResource(R.string.access)) {
+            Log.i("Delp", emailText)
         }
 
         Text(
             stringResource(R.string.no_registered)
         )
 
-        TextButton(onClick = {}) {
-            Text(stringResource(R.string.create_account))
+        InternalTextButton(stringResource(R.string.create_account), TextButtonType.LINK) {
+            navController.navigate(Register)
         }
     }
 }
