@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">Delp!</string>
     <string name="app_slogan">Developer support forum</string>
+    <string name="welcome">Welcome again!</string>
+    <string name="email_placeholder">Email</string>
+    <string name="password_placeholder">Password</string>
+    <string name="access">Access</string>
+    <string name="no_registered">Don\'t have an account?</string>
+    <string name="create_account">Create a new one</string>
 </resources>
