@@ -6,6 +6,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 import up.chiapas.delp.core.network.interceptor.AuthInterceptor
 import up.chiapas.delp.core.network.interceptor.HeaderInterceptor
 import up.chiapas.delp.core.network.interceptor.LoggingInterceptor
+import up.chiapas.delp.login.data.source.LoginService
 import up.chiapas.delp.register.data.source.RegisterService
 
 object RequestHelper {
@@ -40,5 +41,9 @@ object RequestHelper {
 
     val registerService: RegisterService by lazy {
         publicRetrofit.create(RegisterService::class.java)
+    }
+
+    val loginService: LoginService by lazy {
+        publicRetrofit.create(LoginService::class.java)
     }
 }

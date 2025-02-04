@@ -1,10 +1,9 @@
 package up.chiapas.delp.register.presentation
 
-import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import up.chiapas.delp.register.data.model.ActionResponse
+import up.chiapas.delp.core.shared.ActionResponse
 import up.chiapas.delp.register.data.model.CreateUserRequest
 import up.chiapas.delp.register.domain.CreateUserUseCase
 
