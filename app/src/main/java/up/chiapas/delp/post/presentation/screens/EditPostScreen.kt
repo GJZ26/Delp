@@ -17,9 +17,8 @@ import androidx.navigation.NavController
 import kotlinx.coroutines.launch
 import up.chiapas.delp.core.shared.presentation.composable.clickable.InternalButton
 import up.chiapas.delp.core.shared.presentation.composable.layout.DefaultLayout
-import up.chiapas.delp.post.presentation.viewmodels.PostViewModel
 import up.chiapas.delp.post.presentation.composable.PostForm
-import up.chiapas.delp.post.presentation.viewmodels.HomeViewModel
+import up.chiapas.delp.post.presentation.viewmodels.PostViewModel
 
 @Composable
 fun EditPostScreen(id: String, navController: NavController, postViewModel: PostViewModel) {

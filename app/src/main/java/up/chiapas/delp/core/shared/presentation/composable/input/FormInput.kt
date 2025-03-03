@@ -1,6 +1,5 @@
 package up.chiapas.delp.core.shared.presentation.composable.input
 
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
@@ -14,8 +13,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import up.chiapas.delp.ui.theme.DecoloredPurple
-import up.chiapas.delp.ui.theme.LightPurple
 import up.chiapas.delp.ui.theme.Purple
 import up.chiapas.delp.ui.theme.White
 
