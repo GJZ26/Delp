@@ -11,4 +11,4 @@ val Gray = Color(120,120,120,255)
 
 val LightPurple = Color(254,229,255,255)
 val LightOrange = Color(255,225,226,255)
-val LightBlue = Color(225,232,255,255)
+val DecoloredPurple = Color(231,158,240,255)

@@ -7,3 +7,9 @@ object Login
 
 @Serializable
 object Register
+
+@Serializable
+object Home
+
+@Serializable
+object CreatePost

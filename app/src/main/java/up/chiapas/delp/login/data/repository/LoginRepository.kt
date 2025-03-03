@@ -2,8 +2,8 @@ package up.chiapas.delp.login.data.repository
 
 import org.json.JSONObject
 import up.chiapas.delp.core.network.RequestHelper
-import up.chiapas.delp.login.data.model.UserLoginRequest
-import up.chiapas.delp.login.data.model.UserLoginResponse
+import up.chiapas.delp.login.data.model.request.UserLoginRequest
+import up.chiapas.delp.login.data.model.response.UserLoginResponse
 
 class LoginRepository {
     private val loginService = RequestHelper.loginService

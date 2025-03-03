@@ -1,10 +1,9 @@
 package up.chiapas.delp.register.data.repository
 
-import android.util.Log
 import org.json.JSONObject
 import up.chiapas.delp.core.network.RequestHelper
-import up.chiapas.delp.register.data.model.CreateUserRequest
-import up.chiapas.delp.register.data.model.CreateUserResponse
+import up.chiapas.delp.register.data.model.request.CreateUserRequest
+import up.chiapas.delp.register.data.model.response.CreateUserResponse
 
 class RegisterRepository {
     private val registerService = RequestHelper.registerService

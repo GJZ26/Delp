@@ -1,8 +1,8 @@
 package up.chiapas.delp.login.domain
 
 import up.chiapas.delp.core.network.TokenManager
-import up.chiapas.delp.login.data.model.UserLoginRequest
-import up.chiapas.delp.login.data.model.UserLoginResponse
+import up.chiapas.delp.login.data.model.request.UserLoginRequest
+import up.chiapas.delp.login.data.model.response.UserLoginResponse
 import up.chiapas.delp.login.data.repository.LoginRepository
 
 class LoginUseCase {

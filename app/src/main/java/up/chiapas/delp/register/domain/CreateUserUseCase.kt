@@ -2,8 +2,8 @@ package up.chiapas.delp.register.domain
 
 import android.util.Log
 import up.chiapas.delp.core.network.TokenManager
-import up.chiapas.delp.register.data.model.CreateUserRequest
-import up.chiapas.delp.register.data.model.CreateUserResponse
+import up.chiapas.delp.register.data.model.request.CreateUserRequest
+import up.chiapas.delp.register.data.model.response.CreateUserResponse
 import up.chiapas.delp.register.data.repository.RegisterRepository
 
 class CreateUserUseCase {
